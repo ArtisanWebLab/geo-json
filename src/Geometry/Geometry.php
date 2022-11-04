@@ -37,4 +37,9 @@ abstract class Geometry extends GeoJson
 
         return $json;
     }
+
+    public function __toString(): string
+    {
+        return json_encode($this->jsonSerialize());
+    }
 }
