@@ -42,4 +42,9 @@ abstract class Geometry extends GeoJson
     {
         return json_encode($this->jsonSerialize());
     }
+
+    public function asGeoJsonWrap(): string
+    {
+        return 'ST_AsGeoJson('.$this.')';
+    }
 }
